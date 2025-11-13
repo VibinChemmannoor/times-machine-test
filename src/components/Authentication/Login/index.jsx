@@ -1,8 +1,9 @@
+import Button from "../../../utils/Button";
 import Input from "../../../utils/Input";
 import useLogin from "./useLogin";
 
 const Login = () => {
-  const { formik,error, handleUserEmail,handlePassword } = useLogin();
+  const { formik, error, handleUserEmail, handlePassword } = useLogin();
   return (
     <div className="flex flex-1 flex-col justify-center items-left bg-white px-8 py-10 md:px-25">
       <h1 className="text-4xl font-semibold mb-6 text-gray-800">Sign In</h1>
@@ -13,7 +14,10 @@ const Login = () => {
         </a>
       </p>
 
-      <form className="w-full max-w-sm space-y-4" onSubmit={formik.handleSubmit}>
+      <form
+        className="w-full max-w-sm space-y-4"
+        onSubmit={formik.handleSubmit}
+      >
         <Input
           type={`text`}
           label={`Email`}
@@ -34,13 +38,11 @@ const Login = () => {
           error={formik.errors.password && formik.touched.password}
         />
         {error && <p className="font-small text-red-400">{error}</p>}
-        <button
-          type="button"
-          className="w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700 transition"
-          onClick={formik.handleSubmit}
-        >
-          Sign In
-        </button>
+        <Button
+          label={"Sign In"}
+          type={"button"}
+          handleSubmit={formik.handleSubmit}
+        />
 
         {/* Social Media Login */}
         <div className="flex items-center justify-center mt-4">
