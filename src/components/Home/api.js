@@ -3,3 +3,5 @@ export const countyData = async () =>{
     if(!response.ok) throw new Error ('Failed to fetch countries');
     return response.json()
 };
+
+export default countyData;
