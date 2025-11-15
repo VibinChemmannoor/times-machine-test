@@ -6,8 +6,8 @@ export const fetchCountyData = createAsyncThunk(
     "county/fetch-data",
     async (_,{ rejectWithValue}) => {
         try {
-            const res = await countyData()
-            return data
+            const res = await countyData();
+            return res
         } catch (error) {
             return rejectWithValue(error.message)
         }
@@ -24,15 +24,15 @@ const countrySlice = createSlice({
     },
     extraReducers : (builder)=>{
        builder
-      .addCase(fetchCountries.pending, (state) => {
+      .addCase(fetchCountyData.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchCountries.fulfilled, (state, action) => {
+      .addCase(fetchCountyData.fulfilled, (state, action) => {
         state.loading = false;
         state.list = action.payload;
       })
-      .addCase(fetchCountries.rejected, (state, action) => {
+      .addCase(fetchCountyData.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
