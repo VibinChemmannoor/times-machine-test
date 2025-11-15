@@ -36,6 +36,9 @@ export default function CountryListPage() {
 
   const handleLoadMore = () => setVisibleCount((p) => p + 6);
 
+  if(loading) return <p className="text-center py-10">Loading countries...</p>
+  if(error) return <p className="text-center py-10">{error}</p>
+
   return (
     <div className="w-full min-h-screen px-4 md:px-20 py-10 bg-gray-50">
       <div className="flex justify-between items-center mb-8">

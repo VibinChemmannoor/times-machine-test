@@ -7,7 +7,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-col justify-center px-8 md:px-16 py-12 bg-white w-full md:w-1/2">
-      <h1 className="text-2xl font-semibold mb-2">Sign In</h1>
+      <h1 className="text-4xl font-semibold mb-2">Sign In</h1>
       <p className="text-sm text-gray-600 mb-6">
         New user?{" "}
         <a className="text-blue-600 underline cursor-pointer">Create an account</a>
