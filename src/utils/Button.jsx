@@ -3,7 +3,7 @@ const Button = ({type, label, handleSubmit})=>{
         <>
          <button
           type={type}
-          className="w-full bg-blue-600 text-white py-2 rounded-md font-medium hover:bg-blue-700 transition"
+          className="w-full bg-gray-800 text-white py-2 rounded-sm mt-2 hover:bg-black transition"
           onClick={handleSubmit}
         >
           {label}
