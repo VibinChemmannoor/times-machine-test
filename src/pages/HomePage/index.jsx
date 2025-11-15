@@ -1,6 +1,8 @@
+import Home from "../../components/Home"
+
 const HomePage = ()=>{
     return (
-        <>Home Pge</>
+        <Home/>
     )
 }
 export default HomePage
